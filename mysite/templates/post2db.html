@@ -6,7 +6,8 @@
 {% if message %}
     <div class='alert alert-warning'>{{ message }}</div>
 {% endif %}
-
+    <label for='user_title'>標題：</label>
+    <input id='user_title' type='text' name='user_title'><br/>
 <form name='my form' action='.' method='POST'>
     {% csrf_token %}
     <table>
