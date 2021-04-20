@@ -12,6 +12,11 @@
     <input type='submit' value='登入'>
     <input type='reset' value='清除重填'>
 </form>
-
+Your ID: {{ urid | default:"未輸入 ID" }}<br/>
+{% if verified %}
+    <em>你通過了驗證</em>
+{% else %}
+    <em>密碼輸入錯誤</em>
+{% endif %}
 </div>
 {% endblock %}
