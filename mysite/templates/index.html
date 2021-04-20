@@ -13,7 +13,8 @@
     <input type='radio' name='mood' value='{{ m.status }}'>{{ m.status }}
     {% endfor %}
     <br/>
-    心情留言板：<br/>
+    <label for='user_title'>標題：</label>
+    <input id='user_title' type='text' name='user_title'><br/>
     <textarea name='user_post' rows=3 cols=70></textarea><br/>
     <label for='user_id'>你的暱稱：</label>
     <input id='user_id' type='text' name='user_id'>
@@ -21,9 +22,8 @@
     <input id='user_pass' type='password' name='user_pass'><br/>
     <input type='submit' value='張貼'>
     <input type='reset' value='清除重填'>
+    <span class="glyphicon glyphicon-trash" onclick='go_delete({{p.id}})'></span>
 </form>
-
-<span class="glyphicon glyphicon-trash" onclick='go_delete({{p.id}})'></span>
 
 <script>
 function go_delete(id){

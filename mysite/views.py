@@ -49,6 +49,8 @@ def posting(request):
         user_pass = request.POST['user_pass']
         user_post = request.POST['user_post']
         user_mood = request.POST['mood']
+        user_title = request.POST['user_title']
+
     except:
         user_id = None
         message = '如果要張貼訊息，則每一個欄位都要填寫'
